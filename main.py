@@ -1,18 +1,24 @@
 from fastapi import FastAPI
-from pydantic import BaseModel
+# from pydantic import BaseModel
 from starlette.middleware.cors import CORSMiddleware
+import os
+from os.path import join, dirname
+from dotenv import load_dotenv
 
 from db import ConnectDb
 
-class MyPostData(BaseModel):
-    name: str
-    mean: str
+# class MyPostData(BaseModel):
+#     name: str
+#     mean: str
+
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
 
 
 app = FastAPI()
 
 origins = [
-    "http://localhost:8080",
+    os.environ.get("ALLOWED_HOST")
 ]
 
 app.add_middleware(
