@@ -14,7 +14,6 @@ from db import ConnectDb
 dotenv_path = join(dirname(__file__), '.env')
 load_dotenv(dotenv_path)
 
-
 app = FastAPI()
 
 origins = [
@@ -42,9 +41,11 @@ def read_expression(key: str):
                 'id': cur[0],
                 'category_id': cur[1] ,
                 'slug': cur[2],
-                'jp': cur[3],
-                'en': cur[4],
-                'ru': cur[5]
+                'en': cur[3],
+                'ru': cur[4],
+                'jp': cur[5],
+                'fr': cur[6],
+                'it': cur[7]
                 }
 
         except Exception as e:
@@ -63,9 +64,11 @@ def read_all_expressions():
                     'id': expression[0], 
                     'category_id': expression[1],
                     'slug': expression[2],
-                    'jp': expression[3],
-                    'en': expression[4],
-                    'ru': expression[5]
+                    'en': expression[3],
+                    'ru': expression[4],
+                    'jp': expression[5],
+                    'fr': expression[6],
+                    'it': expression[7]
                     }
 
         except Exception as e:
@@ -84,9 +87,11 @@ def read_expressions_in_category(key: str):
                     'id': expression[0], 
                     'category_id': expression[1],
                     'slug': expression[2],
-                    'jp': expression[3],
-                    'en': expression[4],
-                    'ru': expression[5]
+                    'en': expression[3],
+                    'ru': expression[4],
+                    'jp': expression[5],
+                    'fr': expression[6],
+                    'it': expression[7]
                     }
 
         except Exception as e:
