@@ -41,11 +41,18 @@ def read_expression(key: str):
                 'id': cur[0],
                 'category_id': cur[1] ,
                 'slug': cur[2],
-                'en': cur[3],
-                'ru': cur[4],
-                'jp': cur[5],
-                'fr': cur[6],
-                'it': cur[7]
+                'cn': cur[3],
+                'en': cur[4],
+                'es': cur[5],
+                'ru': cur[6],
+                'jp': cur[7],
+                'de': cur[8],
+                'fr': cur[9],
+                'kr': cur[10],
+                'it': cur[11],
+                'tr': cur[12],
+                'idn': cur[13],
+                'gr': cur[14]
                 }
 
         except Exception as e:
@@ -64,11 +71,18 @@ def read_all_expressions():
                     'id': expression[0], 
                     'category_id': expression[1],
                     'slug': expression[2],
-                    'en': expression[3],
-                    'ru': expression[4],
-                    'jp': expression[5],
-                    'fr': expression[6],
-                    'it': expression[7]
+                    'cn': expression[3],
+                    'en': expression[4],
+                    'es': expression[5],
+                    'ru': expression[6],
+                    'jp': expression[7],
+                    'de': expression[8],
+                    'fr': expression[9],
+                    'kr': expression[10],
+                    'it': expression[11],
+                    'tr': expression[12],
+                    'idn': expression[13],
+                    'gr': expression[14]
                     }
 
         except Exception as e:
@@ -87,11 +101,18 @@ def read_expressions_in_category(key: str):
                     'id': expression[0], 
                     'category_id': expression[1],
                     'slug': expression[2],
-                    'en': expression[3],
-                    'ru': expression[4],
-                    'jp': expression[5],
-                    'fr': expression[6],
-                    'it': expression[7]
+                    'cn': expression[3],
+                    'en': expression[4],
+                    'es': expression[5],
+                    'ru': expression[6],
+                    'jp': expression[7],
+                    'de': expression[8],
+                    'fr': expression[9],
+                    'kr': expression[10],
+                    'it': expression[11],
+                    'tr': expression[12],
+                    'idn': expression[13],
+                    'gr': expression[14]
                     }
 
         except Exception as e:
